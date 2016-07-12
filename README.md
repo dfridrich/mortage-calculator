@@ -1,5 +1,10 @@
 # PHP Mortage Calculator
 
+
+[![Build Status](https://img.shields.io/travis/dfridrich/mortage.svg?style=flat-square)](https://travis-ci.org/dfridrich/mortage)
+[![Downloads](https://img.shields.io/packagist/dt/dfridrich/mortage.svg?style=flat-square)](https://packagist.org/packages/dfridrich/mortage)
+[![Latest stable](https://img.shields.io/packagist/v/dfridrich/mortage.svg?style=flat-square)](https://packagist.org/packages/dfridrich/mortage)
+
 I went by train one day and I wanted to make some cool library, so I did this. Now you can **calculate mortage easily in PHP.**
 
 ## Install
