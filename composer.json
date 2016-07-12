@@ -1,0 +1,29 @@
+{
+  "name": "dfridrich/mortage",
+  "type": "library",
+  "description": "Calculate mortage easily in PHP.",
+  "keywords": [
+    "php",
+    "mortage",
+    "financial"
+  ],
+  "homepage": "https://github.com/dfridrich/mortage-calculator",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Dennis Fridrich",
+      "email": "fridrich.dennis@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^5.4|^7.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^4.8|^5.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Defr\\": "src/"
+    }
+  }
+}
