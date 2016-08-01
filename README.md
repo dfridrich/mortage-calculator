@@ -33,6 +33,7 @@ object(Defr\MortageResult)[2]
   private 'monthlyInterestRate' => float 0.001575
   private 'monthlyPayment' => float 5006.9030574862
   private 'totalPayed' => float 1201656.7337967
+  private 'apr' => float 1.91
 ```
 
 ## Credits

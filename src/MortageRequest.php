@@ -135,4 +135,28 @@ class MortageRequest
     {
         return $this->monthTerm;
     }
+
+    /**
+     * @return float
+     */
+    public function getSalePrice()
+    {
+        return $this->salePrice;
+    }
+
+    /**
+     * @return float
+     */
+    public function getMortgageInterestPercent()
+    {
+        return $this->mortgageInterestPercent;
+    }
+
+    /**
+     * @return int
+     */
+    public function getYearTerm()
+    {
+        return $this->yearTerm;
+    }
 }

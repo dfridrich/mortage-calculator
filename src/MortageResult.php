@@ -35,6 +35,11 @@ class MortageResult
     private $totalPayed;
 
     /**
+     * @var float
+     */
+    private $apr;
+
+    /**
      * MortageResult constructor.
      *
      * @param MortageRequest $mortageRequest
@@ -49,10 +54,15 @@ class MortageResult
         $monthlyPayment
     ) {
         $this->mortageRequest = $mortageRequest;
-        $this->annualInterestRate = (float) $annualInterestRate;
-        $this->monthlyInterestRate = (float) $monthlyInterestRate;
-        $this->monthlyPayment = (float) $monthlyPayment;
-        $this->totalPayed = (float) $monthlyPayment * $mortageRequest->getMonthTerm();
+        $this->annualInterestRate = (float)$annualInterestRate;
+        $this->monthlyInterestRate = (float)$monthlyInterestRate;
+        $this->monthlyPayment = (float)$monthlyPayment;
+        $this->totalPayed = (float)$monthlyPayment * $mortageRequest->getMonthTerm();
+        $this->apr = APR::APR_Simple_Annuity(
+            $mortageRequest->getSalePrice(),
+            $this->monthlyPayment,
+            $mortageRequest->getMonthTerm()
+        );
     }
 
     /**
@@ -94,4 +104,13 @@ class MortageResult
     {
         return $this->totalPayed;
     }
+
+    /**
+     * @return float
+     */
+    public function getApr()
+    {
+        return $this->apr;
+    }
+
 }

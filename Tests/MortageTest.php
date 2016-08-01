@@ -3,7 +3,7 @@
 use Defr\MortageRequest;
 
 /**
- * Class FileAsResponseTest
+ * Class MortageTest
  * @author Dennis Fridrich <fridrich.dennis@gmail.com>
  */
 class MortageTest extends PHPUnit_Framework_TestCase
@@ -14,6 +14,7 @@ class MortageTest extends PHPUnit_Framework_TestCase
         $result = $mortage->calculate();
         $this->assertEquals(5007, ceil($result->getMonthlyPayment()));
         $this->assertEquals(1201657, ceil($result->getTotalPayed()));
+        $this->assertEquals(1.9, round($result->getApr(), 1));
     }
 
     /**
